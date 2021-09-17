@@ -66,6 +66,19 @@ class faceTracking:
                 if i[j] <0:
                     i[j] = 0
         return LmsScale
+    
+    def getArea(self,image,position:tuple):
+        wLen=len(image[0])
+        hLen=len(image)
+        
+        x1 = int(position[1]*hLen/9)
+        x2 = int((position[1]+1)*hLen/9)
+        
+        y1 = int(position[0]*wLen/9)
+        y2 = int((position[0]+1)*wLen/9)
+        print(x1,x2,y1,y2)
+        return image[x1:x2,y1:y2]
+        
 
 def main():
     ft = faceTracking()
