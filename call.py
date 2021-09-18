@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 import os
 
 faceDetection = module.faceTracking()
-cap=cv2.VideoCapture(0,cv2.CAP_DSHOW)
+#cap=cv2.VideoCapture(2,cv2.CAP_DSHOW)
+cap=cv2.VideoCapture(2)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT,540)
 cap.set(cv2.CAP_PROP_FRAME_WIDTH,960)
 sus,image = cap.read()
